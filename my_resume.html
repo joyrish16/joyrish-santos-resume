@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyrish Ashanti B. Santos - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Pastel Colors */
+        :root {
+            --pastel-pink: #FADADD; /* Light Pink */
+            --pastel-blue: #ADD8E6; /* Light Blue */
+            --pastel-green: #98FB98; /* Pale Green */
+            --pastel-yellow: #FDFD96; /* Pale Yellow */
+            --pastel-purple: #E0BBE4; /* Light Lavender */
+            --text-color-dark: #36454F; /* Charcoal */
+            --text-color-medium: #5F9EA0; /* Cadet Blue */
+            --section-bg-light: #F8F8FF; /* Ghost White */
+            --border-color: #B0C4DE; /* Light Steel Blue */
+            --accent-color: #87CEEB; /* Sky Blue */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color-dark);
+            background-color: var(--pastel-pink); /* Overall background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: var(--section-bg-light);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes it a circle */
+            object-fit: cover; /* Ensures image covers the area without distortion */
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: var(--text-color-dark);
+            margin: 10px 0 5px;
+            font-size: 2.5em;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: var(--text-color-medium);
+            margin: 0 0 20px;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-color-medium);
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--text-color-dark);
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .about-me-text {
+            font-size: 1em;
+            line-height: 1.8;
+            text-align: justify;
+            background-color: var(--pastel-yellow);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--pastel-yellow); /* Section item background */
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .education-item:last-child, .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item h4, .experience-item h4 {
+            margin: 0 0 5px;
+            color: var(--text-color-dark);
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .education-item p, .experience-item p {
+            margin: 0;
+            color: var(--text-color-medium);
+            font-size: 0.95em;
+        }
+
+        .experience-item ul {
+            list-style: disc;
+            padding-left: 25px;
+            margin-top: 10px;
+            color: var(--text-color-dark);
+        }
+
+        .experience-item ul li {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .skills-category {
+            margin-bottom: 15px;
+        }
+
+        .skills-category h4 {
+            margin: 0 0 8px;
+            color: var(--text-color-dark);
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
+        .skills-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skills-category ul li {
+            background-color: var(--pastel-blue); /* Skill tag background */
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--border-color);
+            color: var(--text-color-medium);
+            font-size: 0.85em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+            .skills-category ul li {
+                padding: 4px 10px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <img src="https://i.imgur.com/axawyCz.jpeg" alt="Joyrish Ashanti B. Santos Profile Photo" class="profile-photo">
+                <div>
+                    <h1>Joyrish Ashanti B. Santos</h1>
+                    <h2>Student</h2>
+                </div>
+            </div>
+            <div class="contact-info">
+                <span>Phone: <a href="tel:+63 9XX XXX XXXX">+63 9XX XXX XXXX</a></span>
+                <span>Email: <a href="mailto:joyrishsantos@gmail.com">joyrishsantos@gmail.com</a></span>
+                <span>Facebook: <a href="https://facebook.com/JoyrishSantos" target="_blank">Joyrish Santos</a></span>
+                <span>Instagram: <a href="https://instagram.com/Jy.rish" target="_blank">@Jy.rish</a></span>
+                <span>Location: Metro Manila, Philippines</span>
+            </div>
+        </header>
+
+        <section>
+            <h3>About Me</h3>
+            <p class="about-me-text">Highly adaptable and detail-oriented professional with strong problem-solving skills and the ability to perform effectively under pressure. I excel in fast-paced environments, maintaining focus and delivering results while managing multiple tasks and tight deadlines. My proactive approach, combined with excellent communication and collaboration abilities, enables me to contribute positively to team dynamics and drive successful outcomes.</p>
+        </section>
+
+        <section>
+            <h3>Education</h3>
+            
+            <div class="education-item">
+                <h4>1st Year - Bachelor of Science in Computer Engineering</h4>
+                <p>EARIST - Manila | 2024-Present</p>
+            </div>
+            
+            <div class="education-item">
+                <h4>Senior High School Graduate</h4>
+                <p>Holy Child Catholic School | 2022-2024</p>
+            </div>
+            
+            <div class="education-item">
+                <h4>High School Graduate</h4>
+                <p>Lakan Dula High School | 2018-2022</p>
+            </div>
+            
+            <div class="education-item">
+                <h4>Elementary School Graduate</h4>
+                <p>Magat Salamat Elementary School | 2012-2018</p>
+            </div>
+            
+        </section>
+
+        <section>
+            <h3>Experience</h3>
+            
+            <div class="experience-item">
+                <h4>Online Seller at Classic Curve Clothing Ph</h4>
+                <p>May 2021 - August 2022</p>
+                <ul>
+                    <li>Selling clothes.</li><li>Assisting customers through online platforms.</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <section>
+            <h3>Skills</h3>
+            
+            <div class="skills-category">
+                <h4>Key Skills</h4>
+                <ul>
+                    <li>Dedicated and Trusted</li><li>Flexible and Hardworking</li><li>Multi - Tasking</li><li>Problem Solving</li><li>Communication Skills</li><li>Working Effectively Under Pressure</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Joyrish Ashanti B. Santos. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
